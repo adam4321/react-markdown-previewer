@@ -95,8 +95,7 @@ And here. | Okay. | I think we get it.
 * And last but not least, let's not forget embedded images:
 
 ![React Logo w/ Text](https://goo.gl/Umyytc)
-\n\r\n\r[Adam Wright](https:\/\/freecodecamp.com\/adam4321)`
+\n\r\n\r[Adam Wright](https://adamjwright.com)`
 
-// ReactDOM.render(<MarkdownApp />, document.getElementById("container"));
 
 export default App;
