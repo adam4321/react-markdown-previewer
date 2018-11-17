@@ -1,14 +1,19 @@
 
+//ts-check
+// Imports
 
 import React from 'react';
 import './App.css';
 import marked from 'marked';
 
-
+// Declarations
 
 marked.setOptions({
   breaks: true,
   });
+
+
+// The App
 
 
 class App extends React.Component {
@@ -49,6 +54,8 @@ class App extends React.Component {
     return {__html: markdown}
   }
 }
+
+// The Placeholder Text
 
 const placeholder = `# React Markdown Previewer!
 
@@ -95,7 +102,8 @@ And here. | Okay. | I think we get it.
 * And last but not least, let's not forget embedded images:
 
 ![React Logo w/ Text](https://goo.gl/Umyytc)
-\n\r\n\r[Adam Wright](https://adamjwright.com)`
+\n\r\n\r>>[Come find me at Adamjwright.com](https://adamjwright.com)`
 
+// The Export statement
 
 export default App;
