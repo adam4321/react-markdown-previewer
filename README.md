@@ -2,8 +2,9 @@
 ![img](https://i.imgur.com/IENvKLW.png)
 
 
-This is a Git Markdown Previewer made with React
+This is a Git Markdown Previewer made with React  
 
+Feel free to change the text in the box on the left and then watch the rendered changes on the right.  
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
