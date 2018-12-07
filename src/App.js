@@ -38,6 +38,7 @@ class App extends React.Component {
               id = "editor" ref = "editor"
               defaultValue = {value}>
             </textarea>
+            <a id='back-button' className='btn' onClick={() => window.history.back()}>Back</a>
           </div>
           <div id="preview" className="one-half column" dangerouslySetInnerHTML={this.createMarkup()}>
         </div>
@@ -59,8 +60,8 @@ class App extends React.Component {
 
 const placeholder = `# React Markdown Previewer!
 
-## This is a sub-heading...
-### And here's some other cool stuff:
+## Just start entering text...
+### And it will render for you:
   
 Heres some code, \`<div></div>\`, between 2 backticks.
 
@@ -69,8 +70,7 @@ Heres some code, \`<div></div>\`, between 2 backticks.
 
 function anotherExample(firstLine, lastLine) {
   if (firstLine == '\`\`\`' && lastLine == '\`\`\`') {
-    return multiLineCode;
-  }
+    return multiLineCode}
 }
 \`\`\`
   
@@ -102,7 +102,7 @@ And here. | Okay. | I think we get it.
 * And last but not least, let's not forget embedded images:
 
 ![React Logo w/ Text](https://goo.gl/Umyytc)
-\n\r\n\r>>[Come find me at Adamjwright.com](https://adamjwright.com)`
+>>[Come find me at Adamjwright.com](https://adamjwright.com)`
 
 // The Export statement
 
