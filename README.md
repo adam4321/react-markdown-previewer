@@ -1,6 +1,6 @@
 
 
-## This is a Git Markdown Previewer made with React. When you change the text in the box on the left you will see all of the rendered changes on the right.  
+## This is a Git Markdown Previewer made with React. There is an entry field on the left and then a display field on the right. When you change the text in the box on the left you will see all of the rendered changes on the right.  
 
 
 ## Desktop View
