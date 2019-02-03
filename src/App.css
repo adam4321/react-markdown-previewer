@@ -9,15 +9,6 @@ a{
   color:rgba(140, 0, 255, 0.397);
 }
 
-@mixin border-box {
-	     -webkit-box-sizing: border-box;
-  /*Safari/Chrome*/
-     -moz-box-sizing: border-box;    
-  /*Firefox*/
-     box-sizing: border-box;         
-  /*Opera/IE 8+*/
-}
-
 .container {
 	padding-top: 30px;
 }
@@ -25,7 +16,6 @@ a{
 .markdown-input {
      width: 100%;
      height: 100%;
-	@include border-box; 
 }
 
 .markdown-div {
@@ -68,6 +58,7 @@ a{
   -o-transition: 0.4s;
   transition: 0.4s;
 }
+
 .darken{
   width:210px;
   height:115px;
@@ -80,6 +71,7 @@ a{
     margin-top:8vw;
     margin-bottom:5vw;
  }
+
  #back-button {
   width:30vw;
   height:8vw;
@@ -89,10 +81,12 @@ a{
   padding-top: .4vw;
   font-size:5vw;
 }
+
 #preview {
   max-width:100%;
 }
 }
+
 @media only screen and (max-width: 400px) {
   #back-button {
     left:33vw;
