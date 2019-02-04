@@ -1,19 +1,15 @@
 
 //ts-check
-// Imports
 
 import React from 'react';
 import './App.css';
 import marked from 'marked';
 
-// Declarations
+//Allows single line break <br>. This mimicks GitHub's syntax.
 
 marked.setOptions({
   breaks: true,
   });
-
-
-// The App
 
 
 class App extends React.Component {
@@ -56,7 +52,7 @@ class App extends React.Component {
   }
 }
 
-// The Placeholder Text
+//The Placeholder Text that displays on page load.
 
 const placeholder = `# React Markdown Previewer!
 
@@ -104,6 +100,5 @@ And here. | Okay. | I think we get it.
 ![React Logo w/ Text](https://goo.gl/Umyytc)
 >>[Come find me at Adamjwright.com](https://adamjwright.com)`
 
-// The Export statement
 
 export default App;
