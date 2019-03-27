@@ -1,32 +1,31 @@
 
-//ts-check
+// @ts-check
 
 import React from 'react';
 import './App.css';
 import marked from 'marked';
 
-//Allows single line break <br>. This mimicks GitHub's syntax.
+// Allows single line break <br> which mimicks GitHub's syntax
 
 marked.setOptions({
   breaks: true,
-  });
-
+});
 
 class App extends React.Component {
   constructor() {
     super();
-    this.state = {
+      this.state = {
         value: placeholder
       };
-	this.handleChange = this.handleChange.bind(this);
-}
+	  this.handleChange = this.handleChange.bind(this);
+  }
   
- render() {
+  render() {
     let {value} = this.state;
     return (
-        <div className = "row">
-          <div 
-            className =
+      <div className = "row">
+        <div 
+          className =
             "one-half column markdown-div">
             <textarea
               className = "markdown-input"
@@ -35,24 +34,26 @@ class App extends React.Component {
               defaultValue = {value}>
             </textarea>
             <a id='back-button' className='btn' onClick={() => window.history.back()}>Back</a>
-          </div>
-          <div id="preview" className="one-half column" dangerouslySetInnerHTML={this.createMarkup()}>
         </div>
-       </div>
+          <div id="preview" className="one-half column" dangerouslySetInnerHTML={this.createMarkup()}>
+          </div>
+      </div>
     )
   }
+
   handleChange() {
     this.setState({
       value: this.refs.editor.value
     });
   }
+
   createMarkup() {
     let markdown = marked(this.state.value);
     return {__html: markdown}
   }
 }
 
-//The Placeholder Text that displays on page load.
+// The placeholder text that displays on page load
 
 const placeholder = `# React Markdown Previewer!
 
