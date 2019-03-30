@@ -12,8 +12,8 @@ marked.setOptions({
 });
 
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
       this.state = {
         value: placeholder
       };

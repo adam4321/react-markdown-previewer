@@ -1,12 +1,12 @@
 
 body {
-  background-color:rgba(0, 195, 255, 0.274);
+  background-color: rgba(0, 195, 255, 0.274);
   margin: 10px 0;
 }
 
 a {
   text-decoration: none;
-  color:rgba(140, 0, 255, 0.397);
+  color: rgba(140, 0, 255, 0.397);
 }
 
 .container {
@@ -23,14 +23,14 @@ a {
 }
 
 #back-button {
-  width:8vw;
-  height:2vw;
-  background-color:#04536d;
-  position:absolute;
-  left:8vw;
-  margin-top:43vw;
+  width: 8vw;
+  height: 2vw;
+  background-color: #04536d;
+  position: absolute;
+  left: 8vw;
+  margin-top: 43vw;
   border-radius: 11px;
-  font-family:verdana;
+  font-family: verdana;
   padding-top: .4vw;
   box-shadow: 1px 3.5px 3px 0px rgb(27, 26, 26);
 }
@@ -38,9 +38,9 @@ a {
 .btn {
   text-decoration: none;
   text-align: center;
-  display:inline-block;
-  color:gold;
-  font-size:1.1vw;
+  display: inline-block;
+  color: gold;
+  font-size: 1.1vw;
 }
 
 .btn {
@@ -54,7 +54,7 @@ a {
 .btn:hover {
   cursor: pointer;
   color: rgba(154, 182, 196, 0.582);
-  opacity:0.7;
+  opacity: 0.7;
   -webkit-transition: 0.4s;
   -moz-transition:  0.4s;
   -o-transition: 0.4s;
@@ -62,9 +62,9 @@ a {
 }
 
 .darken {
-  width:210px;
-  height:115px;
-  margin-left:-40px;
+  width: 210px;
+  height: 115px;
+  margin-left: -40px;
 }
 
 /* Media query below 550px */
@@ -73,22 +73,22 @@ a {
 
   .markdown-div {
     height: 70vw;
-    margin-top:8vw;
-    margin-bottom:5vw;
+    margin-top: 8vw;
+    margin-bottom: 5vw;
   }
 
   #back-button {
-    width:30vw;
-    height:8vw;
-    left:25vw;
-    margin-top:-13vw;
+    width: 30vw;
+    height: 8vw;
+    left: 25vw;
+    margin-top: -13vw;
     border-radius: 11px;
     padding-top: .4vw;
-    font-size:5vw;
+    font-size: 5vw;
   }
 
   #preview {
-    max-width:100%;
+    max-width: 100%;
   }
 }
 
@@ -96,7 +96,7 @@ a {
 
 @media only screen and (max-width: 400px) {
   #back-button {
-    left:33vw;
-    margin-top:-14vw;
+    left: 33vw;
+    margin-top: -14vw;
   }
 }
