@@ -33,8 +33,7 @@ class App extends React.Component {
               id = "editor" ref = "editor"
               defaultValue = {value}>
             </textarea>
-            <a id='back-button' className='btn' onClick={() => window.history.back()}>Back
-            </a>
+            <button id='back-button' onClick={() => window.history.back()}>Back</button>
         </div>
           <div id="preview" className="one-half column" dangerouslySetInnerHTML={this.createMarkup()}>
           </div>
@@ -44,6 +43,7 @@ class App extends React.Component {
 
   handleChange() {
     this.setState({
+      // @ts-ignore
       value: this.refs.editor.value
     });
   }
