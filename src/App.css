@@ -55,12 +55,6 @@ a {
   transition: 0.4s;
 }
 
-.darken {
-  width: 210px;
-  height: 115px;
-  margin-left: -40px;
-}
-
 /* Media query below 550px */
 
 @media only screen and (max-width: 550px) {
