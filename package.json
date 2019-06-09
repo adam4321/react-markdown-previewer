@@ -4,7 +4,10 @@
   "private": true,
   "homepage": "https://adamjwright.com/markdown_previewer",
   "dependencies": {
+    "handlebars": "^4.1.2",
+    "js-yaml": "^3.13.1",
     "marked": "^0.6.1",
+    "querystringify": "^2.1.1",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-marked": "^0.3.1",
