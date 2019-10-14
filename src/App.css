@@ -1,89 +1,94 @@
+/*************************************************************************
+**  Main css file
+*************************************************************************/
 
 body {
-  background-color: rgba(0, 195, 255, 0.274);
-  margin: 10px 0;
+    background-color: rgba(0, 195, 255, 0.274);
+    margin: 10px 0;
 }
 
 a {
-  text-decoration: none;
-  color: rgba(140, 0, 255, 0.397);
+    text-decoration: none;
+    color: rgba(140, 0, 255, 0.397);
 }
 
 .container {
-	padding-top: 40px;
+    padding-top: 40px;
 }
 
 .markdown-input {
-  width: 100%;
-  height: 100%;
-  margin-top: 70px;
+    width: 100%;
+    height: 100%;
+    margin-top: 70px;
 }
 
 .markdown-div {
-  height: 800px;
+    height: 800px;
 }
 
 #back-button {
-  width: 120px;
-  height: 35px;
-  background-color: #04536d;
-  position: absolute;
-  left: 16.5%;
-  border-radius: 11px;
-  border: none;
-  font-family: verdana;
-  text-transform: capitalize;
-  font-weight: 500;
-  font-size: 17px;
-  box-shadow: 1px 3.5px 3px 0px rgb(27, 26, 26);
-  text-align: center;
-  display: inline-block;
-  color: gold;
-  -webkit-transition: 0.4s;
-  -moz-transition:  0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
+    width: 120px;
+    height: 35px;
+    background-color: #04536d;
+    position: absolute;
+    left: 16.5%;
+    border-radius: 11px;
+    border: none;
+    font-family: verdana;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 17px;
+    box-shadow: 1px 3.5px 3px 0px rgb(27, 26, 26);
+    text-align: center;
+    display: inline-block;
+    color: gold;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
 }
 
 #back-button:hover {
-  cursor: pointer;
-  color: rgba(154, 182, 196, 0.582);
-  opacity: 0.7;
-  -webkit-transition: 0.4s;
-  -moz-transition:  0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
+    cursor: pointer;
+    color: rgba(154, 182, 196, 0.582);
+    opacity: 0.7;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
 }
 
-/* Media query below 550px */
+/**********************************************
+**  Media query below 550px 
+**********************************************/
 
 @media only screen and (max-width: 550px) {
+    .markdown-input {
+        height: 300px;
+        margin-top: 30px;
+    }
 
-  .markdown-input {
-    height: 300px;
-    margin-top: 30px;
-  }
-  
-  .markdown-div {
-    height: 340px;
-    margin-bottom: 20px;
-  }
+    .markdown-div {
+        height: 340px;
+        margin-bottom: 20px;
+    }
 
-  #back-button {
-    width: 100px;
-    height: 30px;
-    left: 35%;
-    margin-top: -25px;
-    border-radius: 11px;
-    font-size: 15px;
-  }
+    #back-button {
+        width: 100px;
+        height: 30px;
+        left: 35%;
+        margin-top: -25px;
+        border-radius: 11px;
+        font-size: 15px;
+    }
 }
 
-/* Media query below 290 px */
+/************************************************
+** Media query below 290 px 
+************************************************/
 
 @media only screen and (max-width: 290px) {
-  
-  #back-button {
-    left: 26%;
-  }
+    #back-button {
+        left: 26%;
+    }
 }

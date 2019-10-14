@@ -1,3 +1,8 @@
+/****************************************************************************
+**  Author:       Adam Wright
+**  Description:  Application that creates an in browser display of Github's
+**                markdown dialect
+****************************************************************************/
 
 // @ts-check
 
@@ -5,56 +10,58 @@ import React from 'react';
 import './App.css';
 import marked from 'marked';
 
-// Allows single line break <br> which mimicks GitHub's syntax
 
-marked.setOptions({
-  breaks: true,
-});
+// Allows single line break <br> which mimicks GitHub's syntax
+marked.setOptions({breaks: true});
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-      this.state = {
-        value: placeholder
-      };
-	  this.handleChange = this.handleChange.bind(this);
-  }
-  
-  render() {
-    let {value} = this.state;
-    return (
-      <div className = "row">
-        <div 
-          className =
-          "one-half column markdown-div">
-            <textarea
-              className = "markdown-input"
-              onChange = {this.handleChange}
-              id = "editor" ref = "editor"
-              defaultValue = {value}>
-            </textarea>
-            <button id='back-button' onClick={() => window.history.back()}>Back</button>
-        </div>
-          <div id="preview" className="one-half column" dangerouslySetInnerHTML={this.createMarkup()}>
-          </div>
-      </div>
-    )
-  }
+    constructor(props) {
+        super(props);
+        this.state = {value: placeholder};
+        this.handleChange = this.handleChange.bind(this);
+    }
 
-  handleChange() {
-    this.setState({
-      // @ts-ignore
-      value: this.refs.editor.value
-    });
-  }
+    render() {
+        let { value } = this.state;
+        return (
+            <div className = "row">
+                <div className = "one-half column markdown-div">
+                    <textarea
+                        className = "markdown-input"
+                        onChange = {this.handleChange}
+                        id = "editor"
+                        ref = "editor"
+                        defaultValue = {value}
+                    >
+                    </textarea>
+                    <button id = "back-button" onClick = {() => window.history.back()}> Back </button>
+                </div>
+                <div
+                    id = "preview"
+                    className = "one-half column"
+                    dangerouslySetInnerHTML = {this.createMarkup()}
+                >
+                </div>
+            </div>
+        );
+    }
 
-  createMarkup() {
-    let markdown = marked(this.state.value);
-    return {__html: markdown}
-  }
+    handleChange() {
+        this.setState({
+            // @ts-ignore
+            value: this.refs.editor.value
+        });
+    }
+
+    createMarkup() {
+        let markdown = marked(this.state.value);
+        return {__html: markdown};
+    }
 }
 
-// The placeholder text that displays on page load
+/***************************************************************
+**  The placeholder text that displays on page load
+***************************************************************/
 
 const placeholder = `# React Markdown Previewer!
 
