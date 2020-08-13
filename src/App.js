@@ -59,9 +59,8 @@ class App extends React.Component {
     }
 }
 
-/***************************************************************
-**  The placeholder text that displays on page load
-***************************************************************/
+
+/*  The placeholder text that displays on page load ------------------------ */
 
 const placeholder = `# React Markdown Previewer!
 

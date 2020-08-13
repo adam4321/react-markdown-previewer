@@ -4,12 +4,12 @@
   "private": true,
   "homepage": "https://adamjwright.com/markdown_previewer",
   "dependencies": {
-    "handlebars": "^4.1.2",
-    "js-yaml": "^3.13.1",
-    "marked": "^0.6.1",
+    "handlebars": "^4.7.6",
+    "js-yaml": "^3.14.0",
+    "marked": "^0.6.3",
     "querystringify": "^2.1.1",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-marked": "^0.3.1",
     "react-scripts": "2.1.1",
     "react-skeleton-css": "^1.1.0"
