@@ -6,12 +6,12 @@
   "dependencies": {
     "handlebars": "^4.7.6",
     "js-yaml": "^3.14.0",
-    "marked": "^0.6.3",
+    "marked": "^1.1.1",
     "querystringify": "^2.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-marked": "^0.3.1",
-    "react-scripts": "2.1.1",
+    "react-scripts": "^3.4.3",
     "react-skeleton-css": "^1.1.0"
   },
   "scripts": {
