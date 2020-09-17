@@ -24,23 +24,37 @@ class App extends React.Component {
     render() {
         let { value } = this.state;
         return (
-            <div className="row">
-                <div className="one-half column markdown-div">
-                    <textarea
-                        className="markdown-input"
-                        onChange={this.handleChange}
-                        id="editor"
-                        ref="editor"
-                        defaultValue={value}
+            <div>
+                {/* Github source code link ------------------------------- */}
+                <div id='gh-bar'>
+                    <a
+                        id='gh-link'
+                        href='https://github.com/adam4321/weather-app'
+                        target='_blank'
+                        rel='noopener noreferrer'
                     >
-                    </textarea>
-                    <button id="back-button" onClick={() => window.history.back()}> Back </button>
+                        <div>Open GitHub repo in a new tab</div>
+                    </a>
                 </div>
-                <div
-                    id="preview"
-                    className="one-half column"
-                    dangerouslySetInnerHTML={this.createMarkup()}
-                >
+
+                <div className="row">
+                    <div className="one-half column markdown-div">
+                        <textarea
+                            className="markdown-input"
+                            onChange={this.handleChange}
+                            id="editor"
+                            ref="editor"
+                            defaultValue={value}
+                        >
+                        </textarea>
+                        <button id="back-button" onClick={() => window.history.back()}> Back </button>
+                    </div>
+                    <div
+                        id="preview"
+                        className="one-half column"
+                        dangerouslySetInnerHTML={this.createMarkup()}
+                    >
+                    </div>
                 </div>
             </div>
         );
