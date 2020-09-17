@@ -4,7 +4,17 @@
 
 body {
     background-color: rgba(0, 195, 255, 0.274);
+    width: 100%;
     margin: 0;
+}
+
+#root {
+    width: 100%;
+}
+
+.outside-box {
+    width: 100%;
+    margin: 0 auto;
 }
 
 a {
@@ -16,13 +26,14 @@ a {
     background-color: black;
     text-align: center;
     font-family: verdana;
-    padding-top: 18px;
+    font-size: 18px;
+    padding-top: 10px;
     width: 100%;
-    height: 35px;
-    margin-bottom: 70px;
-    -webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.719);
-    -moz-box-shadow:    0px 3px 5px rgba(100, 100, 100, 0.719);
-    box-shadow:         0px 3px 5px rgba(100, 100, 100, 0.719);
+    height: 36px;
+    margin-bottom: 30px;
+    -webkit-box-shadow: 0px 3px 5px rgba(59, 57, 57, 0.719);
+    -moz-box-shadow:    0px 3px 5px rgba(59, 57, 57, 0.719);
+    box-shadow:         0px 3px 5px rgba(59, 57, 57, 0.719);
 }
 
 #gh-link {
@@ -30,14 +41,17 @@ a {
     color: white;
 }
 
-.container {
-    padding-top: 40px;
+.main-box {
+    margin: auto;
+    width: 70%;
+    padding-top: 0px;
 }
 
 .markdown-input {
     width: 100%;
     height: 100%;
-    margin-top: 70px;
+    padding: 20px 0px 0px 20px;
+    margin-top: 20px;
 }
 
 .markdown-div {
@@ -46,20 +60,20 @@ a {
 
 #back-button {
     width: 120px;
-    height: 37px;
+    height: 35px;
+    display: block;
     background-color: #04536d;
-    position: absolute;
-    left: 16.5%;
-    border-radius: 11px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
     border: none;
     font-family: verdana;
     text-transform: capitalize;
-    font-weight: 500;
-    font-size: 17px;
-    box-shadow: 1px 3.5px 3px 0px rgb(27, 26, 26);
     text-align: center;
-    display: inline-block;
     color: gold;
+    font-weight: 500;
+    font-size: 16px;
+    box-shadow: 1px 3.5px 3px 0px rgb(27, 26, 26);
     -webkit-transition: 0.4s;
     -moz-transition: 0.4s;
     -o-transition: 0.4s;
@@ -79,6 +93,15 @@ a {
 
 /*  Media query below 550px ------------------------------------------------ */
 
+@media only screen and (max-width: 1260px) {
+    .main-box {
+        width: 90%;
+    }
+}
+
+
+/*  Media query below 550px ------------------------------------------------ */
+
 @media only screen and (max-width: 550px) {
     .markdown-input {
         height: 300px;
@@ -90,13 +113,8 @@ a {
         margin-bottom: 20px;
     }
 
-    #back-button {
-        width: 100px;
-        height: 30px;
-        left: 35%;
-        margin-top: -25px;
-        border-radius: 11px;
-        font-size: 15px;
+    #preview {
+        margin-top: 20px;
     }
 }
 
@@ -104,7 +122,5 @@ a {
 /* Media query below 290 px ------------------------------------------------ */
 
 @media only screen and (max-width: 290px) {
-    #back-button {
-        left: 26%;
-    }
+
 }

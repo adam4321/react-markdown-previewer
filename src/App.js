@@ -14,50 +14,13 @@ import marked from 'marked';
 // Allows single line break <br> which mimicks GitHub's syntax
 marked.setOptions({breaks: true});
 
+// 
+
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {value: placeholder};
         this.handleChange = this.handleChange.bind(this);
-    }
-
-    render() {
-        let { value } = this.state;
-        return (
-            <div>
-                {/* Github source code link ------------------------------- */}
-                <div id='gh-bar'>
-                    <a
-                        id='gh-link'
-                        href='https://github.com/adam4321/weather-app'
-                        target='_blank'
-                        rel='noopener noreferrer'
-                    >
-                        <div>Open GitHub repo in a new tab</div>
-                    </a>
-                </div>
-
-                <div className="row">
-                    <div className="one-half column markdown-div">
-                        <textarea
-                            className="markdown-input"
-                            onChange={this.handleChange}
-                            id="editor"
-                            ref="editor"
-                            defaultValue={value}
-                        >
-                        </textarea>
-                        <button id="back-button" onClick={() => window.history.back()}> Back </button>
-                    </div>
-                    <div
-                        id="preview"
-                        className="one-half column"
-                        dangerouslySetInnerHTML={this.createMarkup()}
-                    >
-                    </div>
-                </div>
-            </div>
-        );
     }
 
     handleChange() {
@@ -70,6 +33,48 @@ class App extends React.Component {
     createMarkup() {
         let markdown = marked(this.state.value);
         return {__html: markdown};
+    }
+
+    render() {
+        let { value } = this.state;
+        return (
+            <div className="outside-box">
+                {/* Github source code link ------------------------------- */}
+                <div id='gh-bar'>
+                    <a
+                        id='gh-link'
+                        href='https://github.com/adam4321/react-markdown-previewer'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                    >
+                        <div>Open GitHub repo in a new tab</div>
+                    </a>
+                </div>
+
+                <div className="main-box">
+                    {/* Input field --------------------------------------- */}
+                    <div className="one-half column markdown-div">
+                        <button id="back-button" onClick={() => window.history.back()}> Back </button>
+                        <textarea
+                            className="markdown-input"
+                            onChange={this.handleChange}
+                            id="editor"
+                            ref="editor"
+                            defaultValue={value}
+                        >
+                        </textarea>
+                    </div>
+
+                    {/* Output field -------------------------------------- */}
+                    <div
+                        id="preview"
+                        className="one-half column"
+                        dangerouslySetInnerHTML={this.createMarkup()}
+                    >
+                    </div>
+                </div>
+            </div>
+        );
     }
 }
 
